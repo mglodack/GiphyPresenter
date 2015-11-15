@@ -69,6 +69,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -99,6 +100,8 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="GiphyApi\Constants.cs" />
     <Compile Include="GiphyApi\Endpoints.cs" />
+    <Compile Include="GiphyApi\Parameter.cs" />
+    <Compile Include="Helpers\UrlFormatter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

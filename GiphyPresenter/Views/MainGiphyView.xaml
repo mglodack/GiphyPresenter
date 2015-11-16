@@ -15,8 +15,8 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox Width="150" HorizontalAlignment="Stretch" />
-            <Button Content="Search" />
+            <TextBox Width="150" HorizontalAlignment="Stretch" Text="{Binding Query, Mode=OneWayToSource}"  />
+            <Button Content="Search" Command="{Binding Search}" />
         </StackPanel>
         <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" VirtualizingPanel.IsVirtualizing="True">
             <ItemsControl x:Name="TileItemsControl" ItemsSource="{Binding Gifs, IsAsync=True}" Margin="20">

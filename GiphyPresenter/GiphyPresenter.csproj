@@ -115,7 +115,7 @@
     <Compile Include="GiphyApi\Models\Random.cs" />
     <Compile Include="GiphyApi\Models\Search.cs" />
     <Compile Include="GiphyApi\Parameter.cs" />
-    <Compile Include="Helpers\UrlFormatter.cs" />
+    <Compile Include="Helpers\UriFormatter.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

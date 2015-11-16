@@ -11,10 +11,10 @@ namespace GiphyPresenter.Tests.Helpers
 {
     class UrlFormatterTests
     {
-        static IEnumerable<Parameter> _Parameters = new Parameter[]
+        static IDictionary<string, string> _Params = new Dictionary<string, string>()
         {
-            new Parameter() { Name = "something", Value = "Holy Cow" },
-            new Parameter() { Name = "key", Value = "value" },
+            { "something", "Holy Cow" },
+            { "key", "value" },
         };
 
         static string expected = "something=Holy Cow&key=value";
@@ -22,7 +22,7 @@ namespace GiphyPresenter.Tests.Helpers
         [Test]
         public void BuildParamString_ShouldReturn_CorrectString()
         {
-            var result = UrlFormatter.BuildParamString(_Parameters);
+            var result = UriFormatter.BuildParamString(_Params);
             Assert.AreEqual(expected, result);
         }
     }

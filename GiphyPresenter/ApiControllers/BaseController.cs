@@ -13,6 +13,8 @@ namespace GiphyPresenter.ApiControllers
             { "api_key", "dc6zaTOxFJmzC" },
         };
 
+        public IDictionary<string, string> BaseParams { get { return _baseParams; } }
+
         public abstract string EndPoint { get; set; }
     }
 }

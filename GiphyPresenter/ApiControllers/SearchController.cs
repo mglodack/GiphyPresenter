@@ -23,5 +23,19 @@ namespace GiphyPresenter.ApiControllers
         {
             throw new NotImplementedException();
         }
+
+        IDictionary<string,string> _GetParameters(string query)
+        {
+            return BaseParams.Concat(_GetQueryKVP(query))
+                .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+        }
+
+        IDictionary<string, string> _GetQueryKVP(string query)
+        {
+            return new Dictionary<string, string>()
+            {
+                { _parameter, query },
+            };
+        }
     }
 }

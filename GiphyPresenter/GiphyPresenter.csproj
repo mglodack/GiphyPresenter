@@ -95,6 +95,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ApiControllers\BaseController.cs" />
+    <Compile Include="ApiControllers\SearchController.cs" />
     <Compile Include="ViewModels\GifVM.cs" />
     <Compile Include="ViewModels\MainGiphyViewVM.cs" />
     <Compile Include="Views\MainGiphyView.xaml.cs">

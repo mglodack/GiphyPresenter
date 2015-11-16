@@ -17,12 +17,18 @@ namespace GiphyPresenter.Tests.Helpers
             new Parameter() { Name = "key", Value = "value" },
         };
 
+        static IDictionary<string, string> _Params = new Dictionary<string, string>()
+        {
+            { "something", "Holy Cow" },
+            { "key", "value" },
+        };
+
         static string expected = "something=Holy Cow&key=value";
 
         [Test]
         public void BuildParamString_ShouldReturn_CorrectString()
         {
-            var result = UrlFormatter.BuildParamString(_Parameters);
+            var result = UriFormatter.BuildParamString(_Params);
             Assert.AreEqual(expected, result);
         }
     }

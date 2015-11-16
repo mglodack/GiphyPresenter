@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace GiphyPresenter.GiphyApi.Models
 {
-    class Search
+    public class Search
     {
         [JsonConstructor]
         public Search() { }

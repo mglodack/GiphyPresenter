@@ -11,12 +11,6 @@ namespace GiphyPresenter.Tests.Helpers
 {
     class UrlFormatterTests
     {
-        static IEnumerable<Parameter> _Parameters = new Parameter[]
-        {
-            new Parameter() { Name = "something", Value = "Holy Cow" },
-            new Parameter() { Name = "key", Value = "value" },
-        };
-
         static IDictionary<string, string> _Params = new Dictionary<string, string>()
         {
             { "something", "Holy Cow" },

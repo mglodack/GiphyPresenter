@@ -1,4 +1,5 @@
 ﻿using GiphyPresenter.GiphyApi.Models;
+using GiphyPresenter.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,14 @@ namespace GiphyPresenter.ApiControllers
 
         public Search GetSearchResults(string query)
         {
+            var pathAndQuery = _CombinePathAndQuery(UriFormatter.UrlEncodeParamters(_GetParameters(query)));
+            // TODO: Update this after http request object is created
             throw new NotImplementedException();
+        }
+
+        string _CombinePathAndQuery(string query)
+        {
+            return string.Format("{0}?{1}", EndPoint, query);
         }
 
         IDictionary<string,string> _GetParameters(string query)
